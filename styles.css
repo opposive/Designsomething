@@ -211,6 +211,10 @@ body{
   align-items: center;
 }
 
+
+
+
+
 @media (max-width: 978px) {
   .sidebar{
     display: none;
@@ -220,7 +224,7 @@ body{
     width: 100vw;
   }
 
-  .nav-bar{
+  .navbar{
     display: block;
   }
 }

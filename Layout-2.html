@@ -20,9 +20,25 @@
     </script>
 </head>
 
-<body class="bg-grey">
-    
-    <div class="main h-100">
+<body class="bg-grey" style="overflow: hidden;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light nav-bar" id="myDiv">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main h-80">
         <div class="row h-100">
             <div class="col-md-1 sidebar my-auto border-end border-warning">
                 <div class="container-fluid f20" style="margin-top: 80px ;">
@@ -36,23 +52,7 @@
                 </div>
             </div>
             <div class="col-md-11 main-content">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light d-none nav-bar">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Navbar</a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                <a class="nav-link" href="#">Features</a>
-                                <a class="nav-link" href="#">Pricing</a>
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+
                 <div class="card bg-grey h-100 border-0 p-5 justify-content-center">
                     <h3 class="card-title">
                         Dashboard
@@ -136,6 +136,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        const element = document.getElementById("myDiv");
+        if (window.screen.width > 978) {
+            console.log("big");
+            element.classList.add("d-none");
+        } else {
+            if (element.classList.contains("d-none")) {
+                console.log("contain");
+                element.classList.remove("d-none");
+            }
+
+        }
+    </script>
 
 </body>
 
